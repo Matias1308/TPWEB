@@ -1,4 +1,5 @@
 <?php
+include_once "app/helpers/db.helper.php";
 class PersonajesModel{
 
     private $db;
