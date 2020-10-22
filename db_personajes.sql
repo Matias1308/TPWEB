@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-10-2020 a las 03:46:13
+-- Tiempo de generación: 22-10-2020 a las 10:13:24
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.2.34
 
@@ -38,8 +38,6 @@ CREATE TABLE `clanes` (
 --
 
 INSERT INTO `clanes` (`id`, `clan`, `descripcion`) VALUES
-(1, 'Aburame', 'Es uno de los cuatro clanes nobles de Konohagakure. Los miembros de este clan se caracterizan por utilizar insectos como armas que se alimentan de chakra.'),
-(2, 'Akimichi', 'Es uno de los cuatro clanes nobles de Konohagakure. Es conocido por sus miembros capaces de convertir las calorías en su cuerpo en chakra, siendo la base para efectuar sus jutsus especiales en donde todos ellas están relacionados con el control de su masa, el aumento de tamaño de una parte de su cuerpo, etc.'),
 (3, 'Hyuga', 'Es uno de los cuatro clanes nobles de Konohagakure. Todos los miembros de este clan poseen desde el nacimiento su Kekkei Genkai, el Byakugan. El Clan Hyūga es considerado actualmente como el clan más poderoso de Konohagakure.'),
 (4, 'Inuzuka', 'Es una familia de shinobis de Konohagakure conocida por combatir acompañados por perros ninja (algunos miembros del clan prefieren lobos), estos son considerados compañeros de armas y son fácilmente reconocibles por las distintivas marcas rojas con forma de colmillo que lucen en sus mejillas.'),
 (5, 'Nara', 'Es conocido por ser un clan de Konoha que tiene la habilidad única de Manipular las Sombras y de tener una amplia zona donde crían ciervos. Los miembros de esta familia también han creado un libro de medicina.'),
@@ -68,10 +66,6 @@ CREATE TABLE `personajes` (
 --
 
 INSERT INTO `personajes` (`id`, `personaje`, `descripcion`, `id_clan`) VALUES
-(1, 'Shibi ', 'Es un ninja de rango jōnin de Konohagakure y padre de Shino Aburame. Fue el líder de la División de Protección Jinchūriki de la Gran Alianza Shinobi. Fue calificado como \"el Orgullo de los Aburame\"', 1),
-(2, 'Shino', 'Es un ninja de Konohagakure, famoso por su uso de los Kikaichū, formó parte del Equipo Kurenai, junto a sus compañeros Kiba Inuzuka y Hinata Hyūga. Durante la Cuarta Guerra Mundial Shinobi formó parte de la Quinta División.', 1),
-(3, 'Choji', 'Es un shinobi nivel Chūnin de Konoha, del Clan Akimichi y un miembro del Equipo Asuma. Junto con sus compañeros de equipo, Shikamaru Nara e Ino Yamanaka, Chōji es miembro de la nueva generación de Ino-Shika-Chō, al igual que sus padres lo fueron antes de ellos.', 2),
-(4, 'Choza', 'Es el padre de Chōji Akimichi, y el líder del Clan Akimichi. Como su hijo, él es miembro de un trío Ino-Shika-Chō junto a Shikaku Nara e Inoichi Yamanaka, los padres de los compañeros de su hijo.', 2),
 (5, 'Hiashi', 'Es un ninja de rango jōnin de Konohagakure y el actual líder del Clan Hyūga. Es el hermano gemelo de Hizashi Hyūga y miembro de la rama principal del Clan. Hiashi tiene dos hijas: Hinata y Hanabi, además de hacerse cargo de Neji Hyūga.', 3),
 (6, 'Hinata', 'Es una kunoichi de rango Chūnin de Konoha y antigua heredera de la rama principal del Clan Hyūga. Es hija de Hiashi, prima de Neji y hermana de Hanabi. Formó parte del Equipo Kurenai, siendo compañera de Kiba Inuzuka y Shino Aburame.', 3),
 (7, 'Hizashi', 'era el padre de Neji Hyūga y el hermano gemelo de Hiashi Hyūga, aunque por nacer en segundo lugar, fue puesto en la rama secundaria.', 3),
@@ -105,6 +99,25 @@ INSERT INTO `personajes` (`id`, `personaje`, `descripcion`, `id_clan`) VALUES
 (35, 'Minato Namikaze', 'También conocido como El Destello Amarillo de Konoha, fue el Cuarto Hokage de la Aldea Oculta de la Hoja. Fue discípulo de Jiraiya y maestro de Kakashi Hatake, Obito Uchiha y Rin Nohara. También fue el esposo de Kushina Uzumaki y el padre de Naruto Uzumaki. Además, fue el primer Jinchūriki de la mitad Yin de Kurama. Fue resucitado por Orochimaru en la Cuarta Guerra Mundial Shinobi. Cuando era sólo un niño y estaba en la Academia Ninja, su compañera de clase Kushina Uzumaki pensaba que él era sólo un \"Flacucho medio-afeminado\". Él soñaba con ser reconocido por los aldeanos de Konoha al convertirse en hokage, pero Kushina consideraba que era un sueño imposible. Más tarde, cuando Kushina fue secuestrada por un grupo de ninjas de Kumogakure, ella dejó hilos de su cabello con la esperanza de que alguien la encontrara. Minato fue el único ninja de Konoha en demostrar ser lo suficientemente listo para entender la pista y fue capaz de rescatarla. Minato le había dicho que él siempre había admirado su cabello. En ese momento, ella ya no lo veía como un \"Flacucho medio-afeminado\", se había enamorado de él. Según quienes lo conocían, Minato era un ninja con mucho talento, al haber sido considerado un genio que aparece sólo una vez por generación. Se graduó en la Academia Ninja a la edad de diez años y fue introducido en un equipo de Genin bajo la tutela de Jiraiya. Éste tuvo un interés especial en Minato y lo aceptó como aprendiz, le enseñó La Técnica de Invocación.Uno de los atributos más destacables de Minato era su gran velocidad y sus reflejos aparentemente instantáneos. En comparación entre el Cuarto Raikage con Minato, éste último era capaz de reaccionar lo suficientemente rápido como para esquivar al Raikage usando la Armadura de Elemento Rayo. En su juventud, Jiraiya le enseñó a utilizar el Jutsu de Invocación para convocar a los sapos. Tenía las reservas de chakra suficientes para convocar a Gamabunta y fue la única persona en poder controlarlo de la mejor manera posible. Minato pasó tres años creando el Rasengan, se dice que pudo ser al observar la Bola Bestia con Cola. La técnica no necesita sellos con las manos, utilizando en su lugar una concentración de chakra, girando en forma de una esfera en la palma de la mano del usuario, que inflige un daño inmenso a su objetivo en contacto. Minato fue famoso por su técnica única de espacio-tiempo, el Jutsu Dios del Trueno Volador, que esencialmente le permitía movilizarse a cualquier lugar con el uso de sellos especiales, casi como si se teletransportan. El jutsu le valió el apodo del \"Destello Amarillo de Konoha\", debido a la velocidad imposible de igualar en la que se trasladaba al usar esta técnica. Minato era muy conocedor de fūinjutsu, en parte por Kushina, que le enseñó algunos de los sellos del clan Uzumaki. Conocía todas las capacidades del Sello Consumidor del Demonio de la Muerte, consciente de que no podría sellar por completo el chakra del Kyubi. Minato también podía eliminar la capacidad del oponente para utilizar la Técnica de Invocación. Durante su vida, Minato aprendió a utilizar el Senjutsu directamente del Monte Myōboku, enseñándole a recolectar la Energía Natural y concentrarla para mejorar sus técnicas. Demostrando poder entrar en el Modo Sabio reuniendo dicha energía en su cuerpo, adquiriendo un aumento en todas sus habilidades.', 11),
 (36, 'Gaara', 'Es un shinobi de Sunagakure y el Quinto Kazekage, fue el Comandante General del ejército de la Gran Alianza Shinobi y Comandante de la Cuarta División. Formó parte del ex-equipo Baki. Es el hijo menor del Cuarto Kazekage, Rasa y Karura, hermano menor de Temari y Kankuro. Fue el tercer Jinchūriki de Shukaku. Gaara se ganó el apodo de Gaara de la Cascada de Arena. Gaara es el más joven de los hijos del Cuarto Kazekage, siendo Temari y Kankuro sus hermanos mayores. Cuando nació, la aldea cruzaba su peor momento, ya que él Tercer Kazekage, fue raptado por Sasori y, posteriormente, asesinado y convertido en una de sus marionetas. Sin el Kazekage, las otras aldeas ocultas y naciones vecinas, aprovechaban la ocasión para atacar a la aldea, haciendo la vida allí muy difícil. El recién elegido Cuarto Kazekage, ordenó a Chiyo, una de las ancianas de la Aldea de la Arena, que empleara una técnica de posesión para encerrar al bijū, Shukaku, en el vientre de su esposa, con la esperanza de que así su tercer hijo, Gaara, se transformara en una poderosa arma que bastara para proteger a la debilitada Aldea de la Arena de sus enemigos. Gaara ha sido un shinobi muy poderoso desde su aparición en la serie. Podía hacer temblar de miedo a quienes observaban su poder y, según Kankurō, él nunca había sido lastimado en ninguna de las misiones que había hecho, incluso en algunas de rango -A. En la segunda parte, demostró que era un shinobi muy capaz y confiable al ser nombrado como Kazekage y luego, en la Cuarta Guerra Ninja, donde fue nombrado como Comandante General de la Armada. Aún sin poseer a Shukaku en su interior, sigue siendo un shinobi muy fuerte e inteligente, cosa que demostró al vencer a shinobis de renombre, como el Cuarto Kazekage, el Segundo Mizukage y luego enfrentarse a Madara Uchiha en una batalla. Gaara posee la habilidad de manipular la arena, por lo general, se desplaza por el aire para servir a diversos fines. La cantidad de arena que puede controlar al mismo tiempo es bastante grande, como en la parte II, donde es capaz de reunir suficiente arena para cubrir Sunagakure con un escudo. Si se carece de arena en abundancia, Gaara puede romper los minerales de la tierra para crear más arena. Mientras que él puede controlar cualquier arena seca, la arena común requiere más chakra para manipularla, cansándolo a él a un ritmo rápido. Como resultado de ello, Gaara mantiene su propia arena mejorada con él en todo momento, en una calabaza, también hecha de la arena en su espalda. Debido a esta arena, ya está imbuida de su chakra, Gaara tiene un mejor control sobre ella, permitiendo realizar ataques más fuertes y más rápidos con ella.', 11);
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `contraseña` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `email`, `contraseña`) VALUES
+(1, 'admin@hokage.com', '$2y$12$DiauE5vOAbX1kuLYfv284eiwDanH2CG7zvmw/Sx5xjK.kq7iqfM4S ');
+
 --
 -- Índices para tablas volcadas
 --
@@ -123,6 +136,12 @@ ALTER TABLE `personajes`
   ADD KEY `id_clan` (`id_clan`);
 
 --
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -130,13 +149,19 @@ ALTER TABLE `personajes`
 -- AUTO_INCREMENT de la tabla `clanes`
 --
 ALTER TABLE `clanes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `personajes`
 --
 ALTER TABLE `personajes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas

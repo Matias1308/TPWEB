@@ -1,6 +1,6 @@
 {include 'templates/head.tpl'}
 
-<body>
+
     <form action="editar-clan/{$id}" method="POST">
         <label>Clan</label>
         <input name="clan" type="text">

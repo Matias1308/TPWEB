@@ -1,5 +1,5 @@
 {include 'templates/head.tpl'}
-<body>
+
     <h1> Clanes </h1>
     <form action="agregar-clan" method="POST">
         <label>clan</label>

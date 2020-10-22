@@ -1,6 +1,6 @@
 {include 'templates/head.tpl'}
 
-<body>
+
 
 <form action="editar-personaje/{$id}" method="POST">
     <label>Personaje</label>

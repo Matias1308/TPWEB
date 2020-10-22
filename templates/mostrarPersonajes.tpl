@@ -1,5 +1,5 @@
 {include 'templates/head.tpl'}
-<body>
+
     <h1> Personajes </h1>
 
     <form action="agregar-personaje" method="POST">

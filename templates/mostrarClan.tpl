@@ -1,5 +1,5 @@
 {include 'templates/head.tpl'}
-<body>
+
         <h1>{$clan->clan}</h1>
         <p>{$clan->descripcion}</p>
         <h2>Miembros:</h2>

@@ -1,5 +1,5 @@
 {include 'templates/head.tpl'}
-<body>
+
     <h1> Historia </h1>
 
         <p>Naruto, romanizada como NARUTO, es una serie de manga escrita e ilustrada por Masashi Kishimoto. La obra narra la historia de un ninja adolescente llamado Naruto Uzumaki, quien aspira a convertirse en Hokage, líder de su aldea, con el propósito de ser reconocido como alguien importante dentro de la aldea y entre sus compañeros.
