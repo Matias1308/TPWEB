@@ -11,7 +11,7 @@ class PersonajesModel{
     }
 
     function obtenerPersonajes(){
-        $sentencia = $db->prepare( "SELECT * FROM personajes");
+        $sentencia = $this->db->prepare( "SELECT * FROM personajes");
         $sentencia ->execute ();
         $personajes = $sentencia->fetchAll(PDO::FETCH_OBJ);
         return $personajes;
