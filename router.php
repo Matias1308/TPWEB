@@ -1,7 +1,7 @@
 <?php
+
 include_once 'app/controllers/personajes.controller.php';
 include_once 'app/controllers/auth.controller.php';
-
 
 // defino la base url para la construccion de links con urls semánticas
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
@@ -17,75 +17,91 @@ if (!empty($_GET['action'])) {
 $params = explode('/', $action);
 
 // determina que camino seguir según la acción
-switch ($params[0]) {    
+switch ($params[0]) {   
+
     case 'listar':
         $controller = new personajesController();
         $controller->mostrarPersonajes();
         break;
+
     case 'home':
         $controller = new personajesController();
         $controller-> mostrarHome();
         break;
+
     case 'detallar':
         $id = $params[1];
         $controller = new personajesController();
         $controller->mostrarDetalles($id);
         break;
+
     case 'clanes':
         $controller = new personajesController();
         $controller-> mostrarClanes();
         break;
+
     case 'filtrar':
         $id = $params[1];
         $controller = new personajesController();
         $controller-> filtrarClan($id);
         break;
+
     case 'eliminar-personaje':
         $id = $params[1];
         $controller = new personajesController();
         $controller-> eliminarPersonaje($id);
         break;
+
     case 'agregar-personaje':
         $controller = new personajesController();
         $controller-> agregarPersonaje();
         break;
+
     case 'mostrar-editar':
         $id = $params[1];
         $controller = new personajesController();
         $controller-> mostrarFormEditar($id);
         break;
+
     case 'editar-personaje':
         $id = $params[1];
         $controller = new personajesController();
         $controller-> editarPersonaje($id);
         break;
+
     case 'eliminar-clan':
         $id = $params[1];
         $controller = new personajesController();
         $controller-> eliminarClan($id);
         break;
+
     case 'agregar-clan':
         $controller = new personajesController();
         $controller-> agregarClan();
         break; 
+
     case 'mostrar-editar-clan':
         $id = $params[1];
         $controller = new personajesController();
         $controller-> mostrarFormClan($id);
-        break;  
+        break;
+
     case 'editar-clan':
         $id = $params[1];
         $controller = new personajesController();
         $controller-> editarClan($id);
         break;
+
     case 'login':
         $controller = new authController();
         $controller-> mostrarLogin();
         break;
+
     case 'verificar':
         $controller = new authController();
         $controller-> verificarLogin();
-        break;  
+        break; 
+
     case 'logout':
         $controller = new authController();
         $controller-> logout();
@@ -96,3 +112,4 @@ switch ($params[0]) {
         echo('404 Page not found');
         break;
 }
+?>

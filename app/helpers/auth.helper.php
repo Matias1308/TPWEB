@@ -4,15 +4,11 @@ class AuthHelper {
 
     function __construct() {
 
-        // abre la sessión siempre para usar el helper
         if (session_status() != PHP_SESSION_ACTIVE) {
             session_start();
         }
     }
 
-    /**
-     * Barrera de seguridad para usuario logueado
-     */
     function checkLogged() {
         if (!isset($_SESSION['ID_USUARIO'])) {
             header("Location: " . BASE_URL . "login");
@@ -29,6 +25,5 @@ class AuthHelper {
         $_SESSION['ID_USUARIO'] = $usuario->id;
         $_SESSION['EMAIL_USUARIO'] = $usuario->email;
     }
-
-
 }
+?>

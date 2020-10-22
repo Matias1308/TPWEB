@@ -23,27 +23,19 @@ class authController{
         $email = $_POST['email'];
         $contraseña = $_POST['contraseña'];
 
-        // verifico campos obligatorios
         if (empty($email) || empty($contraseña)) {
             $this->view->mostrarFormLogin("Faltan datos obligatorios");
             die();
         }
 
-        // obtengo el usuario
         $usuario = $this->model->usuarioPorEmail($email);
 
-        // si el usuario existe, y las contraseñas coinciden
         if ($usuario && password_verify($contraseña, $usuario->contraseña)) {
-            // armo la sesion del usuario
             $this->authHelper->login($usuario);
-
-            // redirigimos al listado
             header("Location: " . BASE_URL . 'listar'); 
-            
         } else {
             $this->view->mostrarFormLogin("Credenciales inválidas");
         }
-
     }
 
     function logout() {

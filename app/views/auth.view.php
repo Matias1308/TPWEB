@@ -1,4 +1,5 @@
 <?php
+
 require_once('libs/smarty/libs/Smarty.class.php');
 
 class AuthView {
@@ -13,5 +14,5 @@ class AuthView {
         $this->smarty->assign('error', $error);
         $this->smarty->display('templates/formularioLogin.tpl');
     }
-
 }
+?>

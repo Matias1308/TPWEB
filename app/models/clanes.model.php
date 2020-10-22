@@ -1,5 +1,7 @@
 <?php
+
 include_once "app/helpers/db.helper.php";
+
 class  ClanesModel{
 
     private $db;
@@ -23,14 +25,17 @@ class  ClanesModel{
         $clan = $sentencia->fetch(PDO::FETCH_OBJ);
         return $clan;
     }
+
     function eliminarClan($id){
         $sentencia = $this->db->prepare("DELETE FROM clanes WHERE id = ?");
         $sentencia->execute([$id]);
     }
+
     function agregarClan($clan, $descripcion){
         $sentencia = $this->db->prepare("INSERT INTO clanes (clan, descripcion) VALUES (?,?)");
         $sentencia->execute([$clan, $descripcion]);
     }
+
     function editarClan($clan, $descripcion, $id){
         $sentencia = $this->db->prepare('UPDATE clanes SET clan=?, descripcion=? WHERE clanes.id=?');
         $sentencia->execute([$clan, $descripcion, $id]);

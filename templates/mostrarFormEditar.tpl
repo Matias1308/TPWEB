@@ -1,7 +1,5 @@
 {include 'templates/head.tpl'}
 
-
-
 <form action="editar-personaje/{$id}" method="POST">
     <label>Personaje</label>
     <input name="personaje" type="text">
@@ -17,7 +15,9 @@
     </select>
 
     <button type="submit">Editar</button>
+
 </form>
 
+{include 'templates/footer.tpl'}
 </body>
 </html>

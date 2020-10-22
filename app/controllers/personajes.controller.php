@@ -88,6 +88,7 @@ class PersonajesController{
         $this->model->editarPersonaje($personaje, $descripcion,  $clan, $id);
         header("Location: " . BASE_URL."listar");
     }
+
     function eliminarClan($id){
         $this->authHelper->checkLogged();
         $miembros = $this->model->personajePorClan($id);
@@ -97,6 +98,7 @@ class PersonajesController{
         $this->clanesModel->eliminarClan($id);
         header("Location: " . BASE_URL."clanes");
     }
+
     function agregarClan(){
         $this->authHelper->checkLogged();
         $clan = $_POST['clan'];
@@ -109,10 +111,12 @@ class PersonajesController{
         $this->clanesModel->agregarClan($clan, $descripcion);
         header("Location: " . BASE_URL."clanes");
     }
+
     function mostrarFormClan($id){
         $this->authHelper->checkLogged();
         $this->clanesView->mostrarFormEditar($id);
     }
+
     function editarClan($id){
         $this->authHelper->checkLogged();
         $clan = $_POST['clan'];
@@ -125,7 +129,5 @@ class PersonajesController{
         $this->clanesModel->editarClan($clan, $descripcion, $id);
         header("Location: " . BASE_URL."clanes");
     }
-
 }
-
 ?>

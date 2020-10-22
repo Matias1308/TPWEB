@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-10-2020 a las 10:13:24
+-- Tiempo de generación: 22-10-2020 a las 11:32:42
 -- Versión del servidor: 10.4.14-MariaDB
--- Versión de PHP: 7.2.34
+-- Versión de PHP: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -116,7 +116,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `email`, `contraseña`) VALUES
-(1, 'admin@hokage.com', '$2y$12$DiauE5vOAbX1kuLYfv284eiwDanH2CG7zvmw/Sx5xjK.kq7iqfM4S ');
+(1, 'admin@hokage.com', '$2y$12$DiauE5vOAbX1kuLYfv284eiwDanH2CG7zvmw/Sx5xjK.kq7iqfM4S');
 
 --
 -- Índices para tablas volcadas
