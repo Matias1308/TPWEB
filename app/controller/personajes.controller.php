@@ -81,6 +81,39 @@ class PersonajesController{
         $this->model->editarPersonaje($personaje, $descripcion,  $clan, $id);
         header("Location: " . BASE_URL."listar");
     }
+    function eliminarClan($id){
+        $miembros = $this->model->personajePorClan($id);
+        foreach ($miembros as $miembro) {
+            $this->model->eliminarPersonaje($miembro->id);
+        }
+        $this->clanesModel->eliminarClan($id);
+        header("Location: " . BASE_URL."clanes");
+    }
+    function agregarClan(){
+        $clan = $_POST['clan'];
+        $descripcion = $_POST['descripcion'];
+
+        if (empty($clan) || empty($descripcion)) {
+            $this->clanesView->mostrarError('Faltan datos obligatorios');
+            die();
+        }
+        $this->clanesModel->agregarClan($clan, $descripcion);
+        header("Location: " . BASE_URL."clanes");
+    }
+    function mostrarFormClan($id){
+        $this->clanesView->mostrarFormEditar($id);
+    }
+    function editarClan($id){
+        $clan = $_POST['clan'];
+        $descripcion = $_POST['descripcion'];
+
+        if (empty($clan) || empty($descripcion)) {
+            $this->clanesView->mostrarError('Faltan datos obligatorios');
+            die();
+        }
+        $this->clanesModel->editarClan($clan, $descripcion, $id);
+        header("Location: " . BASE_URL."clanes");
+    }
 
 }
 

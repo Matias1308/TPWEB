@@ -30,5 +30,15 @@ class ClanesView{
             echo "<a href='detallar/$miembro->id'>Mas informacion</a>";
         }*/
     }
+    function mostrarError($error){
+        $smarty = new Smarty();
+        $smarty->assign('error', $error);
+        $smarty->display('templates/mostrarError.tpl');
+    }
+    function mostrarFormEditar($id){
+        $smarty = new Smarty();
+        $smarty->assign('id', $id);
+        $smarty->display('templates/mostrarFormClan.tpl');
+    }
 }    
 ?>
