@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-10-2020 a las 02:20:02
+-- Tiempo de generación: 22-10-2020 a las 03:46:13
 -- Versión del servidor: 10.4.14-MariaDB
--- Versión de PHP: 7.4.10
+-- Versión de PHP: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -119,7 +119,8 @@ ALTER TABLE `clanes`
 -- Indices de la tabla `personajes`
 --
 ALTER TABLE `personajes`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_clan` (`id_clan`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -136,6 +137,16 @@ ALTER TABLE `clanes`
 --
 ALTER TABLE `personajes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `personajes`
+--
+ALTER TABLE `personajes`
+  ADD CONSTRAINT `personajes_ibfk_1` FOREIGN KEY (`id_clan`) REFERENCES `clanes` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
