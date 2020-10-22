@@ -17,11 +17,11 @@ class  ClanesModel{
         return $clanes;
     }
     
-    function obtenerDetallePersonaje($id){
-        $sentencia = $this->db->prepare("SELECT * FROM `personajes` WHERE id=?");
+    function obtenerClan($id){
+        $sentencia = $this->db->prepare("SELECT * FROM `clanes` WHERE id=?");
         $sentencia ->execute ([$id]);
-        $personaje = $sentencia->fetch(PDO::FETCH_OBJ);
-        return $personaje;
+        $clan = $sentencia->fetch(PDO::FETCH_OBJ);
+        return $clan;
     }
 }
 ?>

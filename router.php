@@ -34,7 +34,12 @@ switch ($params[0]) {
     case 'clanes':
         $controller = new personajesController();
         $controller-> mostrarClanes();
-        break;   
+        break;
+    case 'filtrar':
+        $id = $params[1];
+        $controller = new personajesController();
+        $controller-> filtrarClan($id);
+        break;
     default:
         header("HTTP/1.0 404 Not Found");
         echo('404 Page not found');

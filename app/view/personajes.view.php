@@ -8,7 +8,8 @@ class PersonajesView{
         echo "<h1> Personajes </h1>";
 
         foreach ($personajes as $personaje){
-            echo "<h2>".$personaje->personaje."</h2>";
+            echo "<h2>$personaje->personaje</h2>";
+            echo "<h3>Clan: $personaje->clan</h3>";
             echo "<a href='detallar/$personaje->id'>Mas informacion</a>";
         }
     }

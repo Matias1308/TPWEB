@@ -32,9 +32,16 @@ class PersonajesController{
         $personaje = $this->model->obtenerDetallePersonaje($id);
         $this->view->mostrarDetalles($personaje);
     }
+
     function mostrarClanes(){
         $clanes = $this->clanesModel->obtenerClanes();
         $this->clanesView->mostrarClanes($clanes);
+    }
+
+    function filtrarClan($id){
+        $clan = $this->clanesModel->obtenerClan($id);
+        $personajes = $this->model->personajePorClan($id);
+        $this->clanesView->mostrarClan($clan, $personajes);
     }
 }
 
