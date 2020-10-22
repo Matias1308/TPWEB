@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-10-2020 a las 13:27:53
+-- Tiempo de generación: 22-10-2020 a las 13:33:33
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -20,6 +20,35 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `db_personajes`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `clanes`
+--
+
+CREATE TABLE `clanes` (
+  `id` int(11) NOT NULL,
+  `clan` varchar(30) NOT NULL,
+  `descripcion` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `clanes`
+--
+
+INSERT INTO `clanes` (`id`, `clan`, `descripcion`) VALUES
+(3, 'Hyuga', 'El clan Hyuga es uno de los cuatro clanes nobles de Konohagakure. Todos los miembros de este clan poseen desde el nacimiento su Kekkei Genkai, el Byakugan. El Clan Hyūga es considerado actualmente como el clan más poderoso de Konohagakure. Su notoriedad y destreza se extiende llevándose elogios y envidia de otros. El clan se separa en dos partes: la Rama Principal y la Rama Secundaria. La primera dirige la familia entera, mientras que la misión de la segunda es proteger a la otra, estando por completo subordinada. Los miembros de la rama principal hacen efectivo su dominio sobre los otros mediante un sello que es colocado en la frente de cada miembro de la Rama Secundaria a temprana edad. Activando este sello, cualquier daño que se intente hacer a alguien de la rama principal, provoca un dolor profundo mediante la destrucción de células cerebrales.'),
+(4, 'Inuzuka', 'El Clan Inuzuka o Familia Inuzuka es una familia de shinobis de Konohagakure conocida por combatir acompañados por perros ninja (algunos miembros del clan prefieren lobos), estos son considerados compañeros de armas y son fácilmente reconocibles por las distintivas marcas rojas con forma de colmillo que lucen en sus mejillas. Los miembros del clan reciben su propio compañero canino cuando alcanzan cierta edad. A partir de entonces, el shinobi y su(s) perro(s) son prácticamente inseparables. Ambos luchan utilizando técnicas de colaboración, tomando la ventaja de su trabajo en equipo. Los miembros del clan también son capaces de comunicarse con sus perros; pero, a excepción de Kuromaru, estos no pueden hablar. Al igual que sus compañeros caninos, los shinobi han mejorado enormemente sus sentidos, especialmente el del olfato.'),
+(5, 'Nara', 'El Clan Nara  o la Familia Nara es conocido por ser uno de los clanes de Konoha que tiene la habilidad única de Manipular las Sombras y de tener una amplia zona donde crían ciervos. Los miembros de esta familia también han creado un libro de medicina con todo lo relacionado con este área, que incluye los efectos secundarios de las píldoras especiales del Clan Akimichi. A pesar de ser considerados genios, los hombres de esta familia son propensos a ser perezosos y difíciles de motivar. Irónicamente, tienden a sentirse atraídos por mujeres prepotentes. Sin embargo, parece que hay otros factores también. Los hombres Nara parecen tener las mujeres en gran estima, y como resultado, voluntariamente someterse a sus parejas femeninas.'),
+(6, 'Sarutobi', 'El Clan Sarutobi es un clan influyente de Konohagakure. Junto al Clan Shimura, Clan Uchiha y el Clan Senju formaron Konoha. Ha producido varios miembros notables que han ocupado posiciones de alta autoridad, como el Tercer Hokage, o miembros de los Doce Guardianes Ninja cómo Asuma. Todos los miembros conocidos son muy devotos de la Voluntad de Fuego. Se sabe que fue uno de los primeros clanes junto con el Clan Shimura, en tener una alianza con Konohagakure. Los Sarutobi son famosos por su fuerza de voluntad, y por ser unos shinobis excepcionales, fuertes y habilidosos en las técnicas ninja. El clan también parece que posee una aptitud innata para la Transformación de la Naturaleza del Elemento Fuego, ya que todos los miembros conocidos poseen la naturaleza. Los miembros de este clan parecen ser capaces de dominar fácilmente jutsu de alto nivel, teniendo ninjas excepcionales como: Hiruzen Sarutobi fue venerado como el \"Dios Shinobi\", y Konohamaru Sarutobi logró aprender las técnicas de rango A, como el Jutsu: Clon de Sombra y el Rasengan a una edad temprana y Asuma se convirtió en uno de los Doce Guardianes Ninja.'),
+(7, 'Senju', 'El Clan Senju fue considerado el clan más poderoso del mundo shinobi durante la Era de Guerra entre Clanes. Durante este tiempo, sostuvo una ardua rivalidad con el Clan Uchiha, quien era el único que podía medirse con ellos. Ambos clanes, eran rivales y sostenían batallas feroces, pero, posteriormente, decidieron aliarse y formar Konohagakure. Son parientes lejanos del Clan Uzumaki. Los Senju, descendían de manera directa del Sabio de los Seis Caminos, quien heredó el fuerte cuerpo del sabio, su gran vitalidad y longevidad, así como su energía física; todas estás características, serían transmitidas por generaciones a sus descendientes Senju. Gracias a este linaje, los Senju tenderían a heredar de manera innata el Elemento Yang también. Otro aspecto destacable es que, llegaron a ser excelentes maestros en todas las habilidades Ninjutsu, Taijutsu y Genjutsu, hasta el punto de ser conocido como \"El Clan de las Mil Habilidades\".'),
+(8, 'Uchiha', 'El Clan Uchiha es uno de los cuatro clanes nobles de Konohagakure. Fue considerado uno de los dos clanes más poderosos del mundo shinobi debido a su valioso Sharingan, junto con el Clan Senju, durante la Era de Guerra entre Clanes. Debido a sus grandes habilidades en todos los tipos de combates se ganaron el apodo de Clan de la Guerra. Los Uchiha eran famosos por tener grandes reservas de un chakra muy fuerte y jutsus formidables y la aptitud natural para todo lo relacionado con el combate. El clan se caracterizaba porque la mayoría de los miembros tenían la naturaleza de tipo Fuego permitiéndole utilizar e incluso crear una gran cantidad de Jutsus de Fuego. Su principal habilidad era su admirable y eficaz Sharingan, un Kekkei Genkai que les daba la capacidad de ver el chakra, copiar Taijutsu, Genjutsu y Ninjutsu, junto con un número amplio de otras habilidades, aunque eran pocos los miembros del clan manifestaban este dojutsu. Además son conocidos por su habilidad con el genjutsu, llegando a decir que una pelea de uno contra uno con un Uchiha es imposible de ganar. '),
+(9, 'Uzumaki', 'El Clan Uzumaki fue un prominente clan de la aldea Uzushiogakure. Actualmente el clan es reconocido como parte de Konohagakure, con la mayoría de sus miembros viviendo allí y siendo referidos como Familia Uzumaki. Son parientes lejanos del clan Senju. los Shinobis de Konoha, utilizan el símbolo del clan Uzumaki en sus chalecos, así como sobre los hombros de sus uniformes como señal de la amistad y buena voluntad entre las sus aldeas. Los Uzumaki eran conocidos por su uso del Fūinjutsu (jutsus de sello) empleando sellos que se asimilaban al emblema del clan. Los miembros del clan poseen una poderosa fuerza vital que les otorga una longevidad increíble. Esta vitalidad también les permite recuperarse de lesiones y agotamiento en cortos periodos de tiempo. Algunos miembros del clan son capaces de sanar sus heridas y la de los demás al morderse y consumir su Chakra, sin embargo, es peligroso para el usuario debido al gran agotamiento de sus reservas de Chakra.\r\n\r\n'),
+(10, 'Yamanaka', 'El Clan Yamanaka es un clan de Konoha que se encarga de una tienda de flores. Son ninjas especialistas en el arte de manipular la mente. También tienen algunas habilidades sensoriales. Los miembros de este clan se caracterizan por su cabello rubio y sus ojos azules. Tienen la capacidad de leer la mente de un usuario lo cual es muy útil cuando se trata de buscar información y de interrogar a esa persona. También pueden hacer que la mente del oponente sea bloqueada y controlarlo para que obedezcan sus órdenes. Además, tienen la capacidad de comunicarse entre sí con la telepatía. Actualmente se sabe que también poseen algunas habilidades sensoriales, lo que les permite sentir el Chakra de los demás y saber dónde están así como analizar dicho Chakra.'),
+(11, 'Personajes Relevantes', 'Estos son otros personajes que son importantes y/o relevantes en la historia del anime, pero que su clan o es desconocido o no tiene tanta relevancia.'),
+(13, 'Aburame', 'El Clan Aburame es uno de los cuatro clanes nobles de Konohagakure. Los miembros de este clan se caracterizan por utilizar insectos como armas que se alimentan de chakra. Los insectos viven dentro de los miembros desde su nacimiento, residiendo debajo de su piel, y siendo capaces de salir y entrar a través de los poros del cuerpo. también pueden llevar a los insectos adicionales en frascos o calabazas con ellos en las misiones. Utilizan el chakra como una fuente de alimento, por lo que son mortales. La relación entre el shinobi y los insectos es mutuamente beneficiosa. El anfitrión le otorga el refugio a los insectos y les permite alimentarse de su chakra, su cuerpo se convierte en un hervidero de vida de decenas de miles de estos insectos, y a cambio los insectos hacen la voluntad del usuario, permitiendo que el ninja pueda realizar ninjutsu sin el uso de sellos manuales o que impliquen concentración de chakra.'),
+(14, 'Akimichi', 'El Clan Akimichi es uno de los cuatro clanes nobles de Konohagakure. Es conocido por sus miembros capaces de convertir las calorías en su cuerpo en chakra, siendo la base para efectuar sus jutsus especiales en donde todos ellas están relacionados con el control de su masa, el aumento de tamaño de una parte de su cuerpo, etc. Los miembros del clan se caracterizan por tener sobrepeso, debido a que sus técnicas requieren mucho chakra. Su mantenimiento durante la batalla puede ser agotador, y por eso, probablemente, consumen mucho alimento para recuperar y reponer sus reservas de chakra.');
 
 -- --------------------------------------------------------
 
@@ -81,9 +110,34 @@ INSERT INTO `personajes` (`id`, `personaje`, `descripcion`, `id_clan`) VALUES
 (45, 'Rikudo Sennin', 'Hagoromo Ōtsutsuki, quien más tarde sería conocido como el Sabio de los Seis Caminos (Rikudō Sennin), fue un monje que deseaba que la paz reinara en el mundo. Fue una figura alabada como un dios que fundó el Ninshū y creó el mundo shinobi en la tierra. Fue hijo de Kaguya Ōtsutsuki y el primer humano en nacer con chakra. Poseía el Rinnegan, el Dōjutsu más poderoso de los tres legendarios Dōjutsus. Derrotó al Diez Colas con la ayuda de su hermano y selló la bestia dentro de sí mismo, convirtiéndose así en el primer jinchūriki en la historia. A pesar de que no es conocido todo el potencial de Hagoromo, es considerado la figura más poderosa de la historia, solo superado por su propia madre Kaguya, además fue el primer hombre en comprender la naturaleza del Chakra en sí. Esta sabiduría, junto con su Kekkei Mōra, el Rinnegan, le permitió crear la forma original del Ninjutsu, el Ninshū. En el anime, Hagoromo despertó el Sharingan. Al ver que no podía detener a Hamura quien estaba siendo controlado por su madre, Hagoromo se vio en la obligación de herirlo mortalmente lo que provocó que despertara el Mangekyō Sharingan. Hagoromo pudo controlar rápidamente su nuevo poder logrando utilizar el Susanoo y elevarlo a su forma máxima, con la cual fue capaz de luchar a la par con el Diez Colas, pudiendo bloquear una Bola Bestia con Cola con suma facilidad solo utilizando su espada. Debido a que simultáneamente despertó el Mangekyō Sharingan junto al Rinnegan, Hagoromo aparentemente no sufría los efectos secundarios del uso continuo de dicho ojo. Hagoromo desarrolló el primer jutsu capaz de sellar una Bestia con Cola dentro de un cuerpo humano, convirtiéndose en el primer Jinchūriki de la historia. Al poseer al Diez Colas encerrado en su interior, Hagoromo desarrolló un poder desmedido y un chakra insuperable que le permitía controlar ciertas Armas Atesoradas que requerían grandes reservas de chakra para ser utilizadas, provocando que un humano ordinario falleciera en el intento.\r\n', 11),
 (46, 'Yamato ', 'Yamato es un miembro de ANBU, y un ninja de Konohagakure del mismo rango que Kakashi Hatake. Aparece durante la segunda parte del anime. Además, fue el líder temporal del Equipo 7. Se desconoce su nombre real, durante su estadía en Raíz se le conocía como Kinoe, luego adoptó el nombre Tenzō y por último, le fue dado su nombre en clave actual (Yamato) por Tsunade. Como miembro del ANBU, Yamato es muy competente en varias áreas de combate shinobi, incluyendo el seguimiento y captura. Durante su examen de aptitud de su nuevo equipo, demostró gran habilidad en el Taijutsu y el uso inteligente de las tácticas de distracción. Además, gracias a su formación como ANBU, Yamato tiene instintos muy afianzados de batalla, lo que le permite reaccionar rápidamente a las amenazas.Compartiendo el mismo ADN que el Primer Hokage, Yamato posee el Kekkei Genkai de Hashirama el Elemento Madera. Este Kekkei Genkai le permite combinar el Elemento Tierra, utilizándolo en su mano derecha y el Elemento Agua, utilizándolo en la mano izquierda, gracias a esto, puede crear plantas con vida como los árboles y la hierba. Yamato, al tener el ADN del primer Hokage y la habilidad de utilizar el Mokuton, es capaz de suprimir el chakra de un bijuu con la técnica secreta de Hashirama Senju llamada \"Estilo Hokage de Jutsu Sexagenario\".', 11);
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `contraseña` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `email`, `contraseña`) VALUES
+(1, 'admin@hokage.com', '$2y$12$DiauE5vOAbX1kuLYfv284eiwDanH2CG7zvmw/Sx5xjK.kq7iqfM4S');
+
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `clanes`
+--
+ALTER TABLE `clanes`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `personajes`
@@ -93,14 +147,32 @@ ALTER TABLE `personajes`
   ADD KEY `id_clan` (`id_clan`);
 
 --
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `clanes`
+--
+ALTER TABLE `clanes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `personajes`
 --
 ALTER TABLE `personajes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
