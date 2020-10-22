@@ -17,42 +17,15 @@ if (!empty($_GET['action'])) {
 $params = explode('/', $action);
 
 // determina que camino seguir según la acción
-switch ($params[0]) {
-    case 'login':
-        $controller = new AuthContoller();
-        $controller->showLogin();
-        break;
-    case 'verify':
-        $controller = new AuthContoller();
-        $controller->loginUser();
-        break;
-    case 'logout':
-        $controller = new AuthContoller();
-        $controller->logout();
-        break;    
+switch ($params[0]) {    
     case 'listar':
         $controller = new personajesController();
         $controller->showPersonajes();
         break;
-    case 'insertar':
+    case 'home':
         $controller = new personajesController();
-        $controller->addTask();
-        break;
-    case 'eliminar': // eliminar/:ID
-        $controller = new personajesController();
-        $id = $params[1];
-        $controller->deleteTask($id);
-        break;
-    case 'finalizar':
-        $controller = new personajesController();
-        $id = $params[1];
-        $controller->finalizeTask($id);
-        break;
-    case 'ver':
-        $controller = new personajesController();
-        $id = $params[1];
-        $controller->showDetail($id);
-        break;
+        $controller-> showHome();
+        break;    
     default:
         header("HTTP/1.0 404 Not Found");
         echo('404 Page not found');

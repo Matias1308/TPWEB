@@ -17,6 +17,9 @@ class PersonajesController{
         $personajes = $this->model->obtenerPersonajes();
         $this->view->mostrarPersonajes($personajes);
     }
+    function showHome(){
+        $this->view->mostrarHome();
+    }
 }
 
 ?>
