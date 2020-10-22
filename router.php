@@ -40,6 +40,26 @@ switch ($params[0]) {
         $controller = new personajesController();
         $controller-> filtrarClan($id);
         break;
+    case 'eliminar-personaje':
+        $id = $params[1];
+        $controller = new personajesController();
+        $controller-> eliminarPersonaje($id);
+        break;
+    case 'agregar-personaje':
+        $controller = new personajesController();
+        $controller-> agregarPersonaje();
+        break;
+    case 'mostrar-editar':
+        $id = $params[1];
+        $controller = new personajesController();
+        $controller-> mostrarFormEditar($id);
+        break;
+    case 'editar-personaje':
+        $id = $params[1];
+        $controller = new personajesController();
+        $controller-> editarPersonaje($id);
+        break;
+        
     default:
         header("HTTP/1.0 404 Not Found");
         echo('404 Page not found');

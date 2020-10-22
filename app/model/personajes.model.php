@@ -27,11 +27,24 @@ class PersonajesModel{
 
     function personajePorClan($clan){
         $sentencia = $this->db->prepare("SELECT id, personaje FROM personajes WHERE id_clan=?");
-        $sentencia ->execute ([$clan]);
+        $sentencia ->execute([$clan]);
         $personajes = $sentencia->fetchAll(PDO::FETCH_OBJ);
         return $personajes;
     }
 
-}
+    function eliminarPersonaje($id){
+        $sentencia = $this->db->prepare("DELETE FROM personajes WHERE id = ?");
+        $sentencia->execute([$id]);
+    }
 
+    function agregarPersonaje($personaje, $descripcion, $clan){
+        $sentencia = $this->db->prepare("INSERT INTO personajes (personaje, descripcion, id_clan) VALUES (?,?,?)");
+        $sentencia->execute([$personaje, $descripcion, $clan]);
+    }
+
+    function editarPersonaje($personaje, $descripcion, $clan, $id){
+        $sentencia = $this->db->prepare('UPDATE personajes SET personaje=?, descripcion=?, id_clan=? WHERE personajes.id=?');
+        $sentencia->execute([$personaje, $descripcion, $clan, $id]);
+    }
+}
 ?>

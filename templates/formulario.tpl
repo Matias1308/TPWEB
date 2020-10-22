@@ -1,4 +1,4 @@
-<form action="agregar" method="POST">
+<form action="agregar-personaje" method="POST">
     <label>Personaje</label>
     <input name="personaje" type="text">
 
@@ -6,14 +6,11 @@
     <textarea name="descripcion"></textarea>
 
     <label>Clan</label>
-    <select name="clanes">
+    <select name="clan">
         {foreach from=$clanes item=clan}
             <option value={$clan->id}>{$clan->clan}</option>
         {/foreach}
     </select>
+
     <button type="submit">Agregar</button>
-
-
-    <h1>ERROR PADRE</h1>
-    <h2>$error</h2>
 </form>

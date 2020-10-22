@@ -4,10 +4,16 @@ class PersonajesView{
 
     function __construct(){ 
     }
+    function mostrarError($error){
+        $smarty = new Smarty();
+        $smarty->assign('error', $error);
+        $smarty->display('templates/mostrarError.tpl');
+    }
 
-    function mostrarPersonajes($personajes){
+    function mostrarPersonajes($personajes, $clanes){
         $smarty = new Smarty();
         $smarty->assign('personajes', $personajes);
+        $smarty->assign('clanes', $clanes);
         $smarty->display('templates/mostrarPersonajes.tpl');
 
 
@@ -37,6 +43,12 @@ class PersonajesView{
         $smarty->display('templates/mostrarDetalles.tpl');
        /* echo "<h2>$personaje->personaje</h2>";
         echo "<p>$personaje->descripcion</p>";*/
+    }
+    function mostrarFormEditar($id, $clanes){
+        $smarty = new Smarty();
+        $smarty->assign('id', $id);
+        $smarty->assign('clanes', $clanes);
+        $smarty->display('templates/mostrarFormEditar.tpl');
     }
 }
 ?>
