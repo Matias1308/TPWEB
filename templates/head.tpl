@@ -8,26 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body>
- {*<nav>
-    <ul>
-        <li>
-            <a href="home">Home</a> 
-        </li>
-        <li>
-            <a href="clanes">Clanes</a>
-        </li>
-        <li>
-            <a href="listar">Personajes</a>
-        </li>
-        {if isset($smarty.session.EMAIL_USUARIO)}
-            <li>Ahora sos Hokage</li>
-            <li><a href="logout">Logout</a></li>
-        {else}
-            <li>Tu Rango solo llega a Genin</li>
-            <li><a href="login">Login</a></li>
-        {/if}
-    </ul>
-</nav>*}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="home">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
