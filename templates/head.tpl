@@ -18,12 +18,12 @@
         <li>
             <a href="listar">Personajes</a>
         </li>
-        <li>
-            {if isset($smarty.session.EMAIL_USER)}
-                Ahora sos Hokage
-            {else}
-                Tu rango solo llega a Genin
-            {/if}
-        </li>
+        {if isset($smarty.session.EMAIL_USUARIO)}
+            <li>Ahora sos Hokage</li>
+            <li><a href="logout">Logout</a></li>
+        {else}
+            <li>Tu Rango solo llega a Genin</li>
+            <li><a href="login">Login</a></li>
+        {/if}
     </ul>
 </nav>

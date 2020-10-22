@@ -1,6 +1,6 @@
 <?php
-include_once 'app/controller/personajes.controller.php';
-//include_once 'app/controller/auth.controller.php';
+include_once 'app/controllers/personajes.controller.php';
+include_once 'app/controllers/auth.controller.php';
 
 
 // defino la base url para la construccion de links con urls semánticas
@@ -77,7 +77,19 @@ switch ($params[0]) {
         $id = $params[1];
         $controller = new personajesController();
         $controller-> editarClan($id);
-        break;             
+        break;
+    case 'login':
+        $controller = new authController();
+        $controller-> mostrarLogin();
+        break;
+    case 'verificar':
+        $controller = new authController();
+        $controller-> verificarLogin();
+        break;  
+    case 'logout':
+        $controller = new authController();
+        $controller-> logout();
+        break;            
         
     default:
         header("HTTP/1.0 404 Not Found");
