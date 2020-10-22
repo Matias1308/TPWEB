@@ -10,7 +10,7 @@ define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
 } else {
-    $action = 'listar'; // acción por defecto si no envían
+    $action = 'home'; // acción por defecto si no envían
 }
 
 // parsea la accion Ej: suma/1/2 --> ['suma', 1, 2]
@@ -20,12 +20,21 @@ $params = explode('/', $action);
 switch ($params[0]) {    
     case 'listar':
         $controller = new personajesController();
-        $controller->showPersonajes();
+        $controller->mostrarPersonajes();
         break;
     case 'home':
         $controller = new personajesController();
-        $controller-> showHome();
-        break;    
+        $controller-> mostrarHome();
+        break;
+    case 'detallar':
+        $id = $params[1];
+        $controller = new personajesController();
+        $controller->mostrarDetalles($id);
+        break;
+    case 'clanes':
+        $controller = new personajesController();
+        $controller-> mostrarClanes();
+        break;   
     default:
         header("HTTP/1.0 404 Not Found");
         echo('404 Page not found');

@@ -9,7 +9,7 @@ class PersonajesView{
 
         foreach ($personajes as $personaje){
             echo "<h2>".$personaje->personaje."</h2>";
-            echo "<p>".$personaje->descripcion."</p>"; 
+            echo "<a href='detallar/$personaje->id'>Mas informacion</a>";
         }
     }
     function mostrarHome(){
@@ -21,6 +21,10 @@ class PersonajesView{
         
         La historia sigue a Naruta y al crecimiento indidividual de sus amigos junto a su desarrollo como ninja. Naruto se relaciona con Sasuke Uchiha y Sahura Haruno, quienes forman el Equipo 7 junto a su sensei Kakashi Hatake. Mientras ellos aprenden nuevas habilidades de ninja, moldear su chakra y conocer a nueva gente y escenarios, Naruto lucha por su sueño. Durante su camino conocerán a los tres legendarios ninja: Jiraiya, Orochimaru y Tsunade; y se encontrarán con varios enemigos con los que poder superarse día a día.
         </p>";
+    }
+    function mostrarDetalles($personaje){
+        echo "<h2>$personaje->personaje</h2>";
+        echo "<p>$personaje->descripcion</p>";
     }
 }
 ?>

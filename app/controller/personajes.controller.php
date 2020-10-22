@@ -13,12 +13,18 @@ class PersonajesController{
         $this->view = new PersonajesView();    
     }
 
-    function showPersonajes(){
+    function mostrarPersonajes(){
         $personajes = $this->model->obtenerPersonajes();
         $this->view->mostrarPersonajes($personajes);
     }
-    function showHome(){
+
+    function mostrarHome(){
         $this->view->mostrarHome();
+    }
+
+    function mostrarDetalles($id){
+        $personaje = $this->model->obtenerDetallePersonaje($id);
+        $this->view->mostrarDetalles($personaje);
     }
 }
 
